@@ -52,7 +52,7 @@ d3.csv(csv_1).then(function(data) {
     // add markers
     latlngs.forEach(function(d, i){
         L.marker(d, {opacity: 0}) // hide points
-          .bindPopup("Number of death " + data[i].nkill, {keepInView: true})
+          .bindPopup(data[i].nkill + " people killed at " + data[i].city, {keepInView: true})
           .addTo(map);
     });    
 
