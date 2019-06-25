@@ -13,7 +13,7 @@ L
 
 
 // var url = "http://localhost:5000/api/v1.0/terrorism_data";    
-var csv_1 = "data2.csv"; //this dataset only contain nkill > 10.
+var csv_1 = "j./static/parse_gtdb.csv"; //this dataset only contain nkill > 10.
 
 // d3.json(url).then(function(data){
 d3.csv(csv_1).then(function(data) {            
