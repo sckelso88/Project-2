@@ -31,7 +31,7 @@
               <span class="icon-bar"></span>
             </button>
             <div class="col-xs-9 phone-nav">
-              <a class="navbar-brand" href="#" id="logo">Global Terrorism: 1970-2017</a>
+              <a class="navbar-brand" href="index.html" id="logo">Global Terrorism: 1970-2017</a>
             </div>
           </div>
 
@@ -67,31 +67,51 @@
     <!-- End of navbar -->
 
     <!-- Start of container -->
-    <div class="container">
-      <section class="row">
-        <div class="col-md-8">
-          <article class="description-content">
-            <h1 class="description-header">Project Goal</h1>
-            <hr class="description-hr"/>
-            <p>Time period: 1970-2017, except 1993</p>
-            <p>Variables: >100 variables on date, location, tactics, casualties, targets, and outcomes</p>
-            <p>Definition of terrorism:</p>
-            <p>"The threatened or actual use of illegal force and violence by a non-state actor to attain a political, economic, religious, or social goal through fear, coercion, or intimidation."</p>
-            <p>Data Sources:</p>
-            <a href="https://www.kaggle.com/START-UMD/gtd"><font color= "cyan">Dataset</font></a> 
-          </article>
+    <div class="hero text-center">
+        <h1><font color= "cyan">Terrorism Data</font></h1>
+        <p><font color=#c2dde6>Fatal Attacks 1970-2017</font></p>
+      </div>
+      <div class="container">
+        <div class="row margin-top-50">
+          <div class="col-md-2">
+            <aside class="filters">
+              <div class="panel panel-default">
+                <div class="panel-heading">Filter Search</div>
+                <div class="panel-body">
+                  <form>
+                    <div class="form-group">
+                      <ul class="list-group" id="filters">
+                        <li class="filter list-group-item">
+                          <label for="date">Enter a Date</label>
+                          <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        </li>
+                      </ul>
+                    </div>
+                    <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
+                  </form>
+                </div>
+              </div>
+            </aside>
+          </div>
+          <div class="col-md-10">
+            <div id="table-area" class="">
+              <table id="ufo-table" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th class="table-head"><font color=#c2dde6>Date</font></th>
+                    <th class="table-head"><font color=#c2dde6>City</font></th>
+                    <th class="table-head"><font color=#c2dde6>Country</font></th>
+                    <th class="table-head"><font color=#c2dde6>Fatalities</font></th>
+                    <th class="table-head"><font color=#c2dde6>Attack Type</font></th>
+                    <th class="table-head"><font color=#c2dde6>Weapon Type</font></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
         </div>
-          <!-- Start of Visualizations imageNav Area -->
-        <div class="col-md-4">  
-          <section id="imageNav-area">
-              <img class="align-self-start mr-3" src="https://media0.giphy.com/media/ZpNM4LSym4K9q/giphy.gif" onload="typeof google==='object'&amp;amp;google.aft&amp;amp;google.aft(this)" alt="Related image" width="200" height="200" style="margin-top: 20px;" data-iml="1561013897791">
-              
-          </section>
-          <!-- End of the Visualizations imageNav Area -->
-
-        </div>
-      </section>
-    </div>
+      </div>
     <!-- End of container -->
 
     <!-- Start of footer -->
@@ -111,3 +131,4 @@
   </body>
 
 </html>
+
