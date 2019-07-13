@@ -6,16 +6,20 @@ function unique(a) {
 
 
 
-var csv = "aot.csv"
+var csv = "incidents_summary.csv"
 d3.csv(csv).then(function(data) {            
     console.log(data);
+  var multi_trace = [];
+  for (var j = 1; j < 13; j++) {
+    
+
     var year = [];
     var event = [];
     
     
     for (var i = 0; i < data.length; i++) {
     	var iyear = data[i].iyear;
-    	var total = data[i].total;
+    	var total = data[i][j];
     	year.push(iyear);
     	event.push(total)
 	}
@@ -52,7 +56,10 @@ var trace1 = {
   }
 
 };
+// var data = [trace1];
+multi_trace.push(trace1)
 
+  };
 
 var layout = {
    margin: {
@@ -93,9 +100,9 @@ var layout = {
 };
 
 
-var data = [trace1];
 
-Plotly.newPlot('myDiv', data, layout);
+
+Plotly.newPlot('myDiv', multi_trace, layout);
 
 	//console.log(x_axis);
     console.log(year);
